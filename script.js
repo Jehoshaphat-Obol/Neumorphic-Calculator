@@ -114,3 +114,7 @@ function change(){
         mode.innerText = counter;
     }
 }
+
+
+
+// Form scripts

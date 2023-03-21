@@ -10,11 +10,12 @@
     background-color: transparent;
     border: none;
     box-shadow: 3px 6px 9px 2px rgb(100, 100, 100),
-        inset 3px 6px 9px 1px white;
+        inset 3px 6px 9px 1px white,
+        inset -3px -6px 9px 2px rgb(70,70,70);
 }
 
 body{
-    background-color: rgb(230, 200, 200);
+    background-color: rgb(202, 189, 189);
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -24,7 +25,7 @@ body{
 
 .container{
     position: absolute;
-    width: min(320px, 100vw);
+    width: min(320px, 98vw);
     aspect-ratio: 1 / 1.62;
     background-color: rgb(200, 200, 200);
     border-radius: 20px;
@@ -193,13 +194,45 @@ sup{
 
 h1{
     position: absolute;
-    top: 50px;
-    font-size: 50px;
-    color: yellow;
+    top: 10px;
+    font-size: 2rem;
+    color: white;
     box-shadow: unset;
     font-family: 'orbitron';
 }
 
+h1::before{
+    content: '#MadeWith💖';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    text-shadow: 0px 0px 10px white;
+    height: 2rem;
+    animation: sweep 5s infinite linear;
+    border-right: 5px white double;
+    word-wrap:break-word;
+    filter: drop-shadow(5px 5px 10px);
+}
+
+@keyframes sweep {
+    0%{
+        width: 0%;
+    }
+
+    40%{
+        width: 100%;
+    }
+
+    70%{
+        width: 41%;
+    }
+    100%{
+        width: 0%;
+    }
+
+
+}
 /*THE DARK MODE BEGINS header*/
 
 .mode{
@@ -222,7 +255,8 @@ body.dark{
 .calculator.dark{
     background-color: rgb(30, 30, 30);
     box-shadow: 3px 6px 9px 2px rgb(0, 0, 0),
-        inset 3px 6px 9px 1px white;
+        inset 3px 6px 9px 1px white,
+        inset -3px -6px 9px 2px rgb(0,0,0);
 }
 
 .screen.dark{
